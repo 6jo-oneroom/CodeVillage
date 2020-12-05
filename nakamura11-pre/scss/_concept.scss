@@ -1,0 +1,97 @@
+.concept {
+  background: linear-gradient(to bottom, $bgc_02 0% 40%, $bgc_03 40% 100%);
+  width: 100%;
+  @include tab {
+      background: linear-gradient(to bottom, $bgc_02 0% 30%, $bgc_03 30% 100%);
+  }
+
+}
+
+.concept-flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.img-01 {
+  width: 62.5%;
+    height: auto; //100%にすると横幅に合わせて画像が調整されてしまう
+
+  @include tab {
+    width: 49%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 100%; // X Y
+
+  }
+}
+
+
+.img-02 {
+  width: 36.2%;
+    height: auto;
+
+  @include tab {
+    width: 49%;
+    height: auto;
+
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 100%; // X Y
+  }
+}
+
+.concept-contents {
+  width: 85%;
+  padding-top: 70px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: $fc_03;
+
+  @include tab {
+    width: 100%;
+    padding-top: 50px;
+    flex-direction: column;
+  }
+
+  &__copy {
+    font-family: $ff_02;
+    padding-top: 23px;
+    font-size: 4rem;
+    letter-spacing: 0.4em;
+    min-width: 442px;
+
+    @include tab {
+      font-size: 18px;
+      padding-top: 0px;
+      text-align: center;
+      min-width: 0;
+    }
+  }
+
+  &__text {
+    font-family: $ff_05;
+    width: 45%;
+    // overflow: hidden;
+    height: 145px;
+
+
+    @include tab {
+      width: 100%;
+      min-width: 0;
+      padding-top: 18px;
+      height: 221px;
+    }
+  }
+}

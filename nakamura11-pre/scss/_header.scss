@@ -1,0 +1,83 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 68px;
+  padding-left: 77px;
+  // position: fixed; ヘッダを画面上部に固定
+  position: absolute;//ヘッダが追従しない設定に戻す用
+  z-index: 10;
+    @include tab {
+      position: static;
+      background-color: $bgc_01;
+      padding: 24px 20px;
+      justify-content: space-between;
+    }
+}
+
+
+
+
+
+.header-logo {
+  font-size: 3.8rem;
+  line-height: 1.2em;
+  @include tab {
+    font-size: 2.2rem;
+  }
+
+}
+
+.ham {
+  display: none;
+
+  @include tab {
+    width: 16px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: $fc_01;
+      &:nth-child(3) {
+        width: 50%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.header-menu {
+  font-size: 1.8rem;
+        @include tab {
+          display: none;
+          ;
+        }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+
+
+  }
+
+  li {
+    margin-left: 20px;
+    display: inline-block;
+
+    &:first-child {
+      border-bottom: 1px solid $fc_01;
+    }
+
+    span {
+      color: $fc_02;
+    }
+  }
+
+}

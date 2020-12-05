@@ -1,0 +1,57 @@
+
+.access {
+  background-color: $bgc_02;
+  padding-bottom: 70px;
+  &__wrap {
+    margin-top: 6px;
+    display: flex;
+    background-color: $bgc_04;
+    @include tab {
+      flex-direction: column-reverse;
+    }
+
+  }
+
+
+}
+
+
+
+.address {
+  padding-top: 100px;
+  padding-bottom: 100px;
+    padding-left: calc(calc(100vw - 85vw) / 2);
+    text-align: left;
+    width: 40%;
+    @include tab {
+      width: 100%;
+        padding-top: 30px;
+        padding-bottom: 60px;
+      padding-left: calc(calc(100vw - 89vw) / 2);
+    }
+
+    &__title {
+      font-size: 2.4rem;
+      letter-spacing: 0.1em;
+      color: $fc_04;
+
+    }
+
+    &__text {
+      padding-top:24px;
+
+      color: $fc_03;
+      &:first-child {
+        padding-top: 30px;
+      }
+
+    }
+
+  }
+      .map {
+        width: 60%;
+        @include tab {
+          width: 100%;
+          height: calc(100vw * 0.61);
+        }
+      }

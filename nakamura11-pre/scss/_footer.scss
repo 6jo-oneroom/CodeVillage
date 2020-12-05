@@ -1,0 +1,84 @@
+footer {
+  height: 342px;
+  display: flex;
+      align-items: flex-end;
+  @include tab {
+    height: 260px;
+  }
+}
+
+.footer-wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+    height: 50%;
+    padding-bottom: 60px;
+
+    @include tab {
+      height: 70%;
+      padding-bottom: 30px;
+    }
+}
+
+.footer-contents {
+  height: 100%;
+  border-top: 1px solid $fc_06;
+  display: flex;
+  justify-content: space-between;
+    align-items: flex-end;
+  @include tab {
+    position: relative;
+    justify-content: none;
+  }
+}
+
+.footer-logo {
+    display: flex;
+          align-items: center;
+    @include tab {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+  &__logo {
+    color: $fc_05;
+    font-size: 3.2rem;
+
+    @include tab {
+      font-size: 1.8rem;
+    }
+    }
+
+  &__icon {
+    font-size: 2rem;
+    color: $fc_01;
+    padding-left: 9px;
+    vertical-align: 0;
+
+    &:first-child {
+      padding-left: 26px;
+  }
+  @include tab {
+
+  }
+
+
+
+  }
+
+}
+
+.reserve-btn {
+  height: 37px;
+  line-height: 37px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border: 1px solid $fc_01;
+  @include tab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

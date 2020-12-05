@@ -1,0 +1,136 @@
+////////////////
+//    変数     //
+////////////////
+// フォントの種類
+$ff_01: "Roboto Mono for Powerline",
+Roboto;
+$ff_02: "Hiragino Mincho Pro W3",
+serif;
+$ff_03: "Zapfino",
+serif;
+$ff_04: "Roboto",
+monospace;
+$ff_05: "Hiragino Kaku Gothic Pro W3",
+sans-serif;
+
+// フォントの色
+$fc_01: #000000;
+$fc_02: #707070;
+$fc_03: #FFFFFF;
+$fc_04: #00000038;
+$fc_05: #7070704D;
+$fc_06: #70707036;
+
+
+// 背景色
+$bgc_01: #FFFFFF;
+$bgc_02: #A193861F;
+$bgc_03: #A1938689;
+$bgc_04: #D0C5BA;
+
+
+////////////////
+//    mixin   //
+////////////////
+@mixin pc {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin lhCrop($line-height) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+////////////////
+//    共通    //
+////////////////
+
+html {
+  font-size: 62.5%; // 10px
+  scroll-behavior: smooth; //スムーススクロール
+}
+
+body {
+  width: 100%;
+  line-height: 1.67;
+}
+
+.title {
+  font-size: 1.8rem;
+  letter-spacing: 0.3em;
+  color: $fc_02;
+  padding-top: 256px;
+  width: 85%;
+  margin: 0 auto;
+
+  @include tab {
+    width: 89%;
+    padding-top: 60px;
+  }
+
+  &:after {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid $fc_02;
+    width: 9.5rem;
+    margin-left: 2rem;
+    vertical-align: 25%;
+
+    @include tab {
+      width: 3rem;
+    }
+
+  }
+
+
+
+}
+
+.logo {
+  font-family: $ff_01;
+  font-size: 3.8rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+}
+
+
+
+.text {
+  font-family: $ff_01;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  line-height: 1.7em;
+}
+
+.wrap {
+  width: 85%;
+  padding-top: 11px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include tab {
+    width: 89%;
+    margin: 0 auto;
+    padding: 50px 0 62px 0;
+  }
+}
