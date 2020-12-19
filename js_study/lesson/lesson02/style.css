@@ -1,0 +1,48 @@
+div.box {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  /* border-radius: 50%; */
+  /* 50%にすると丸くなる */
+  margin-bottom: 1em;
+}
+
+/* 疑似クラス:hover */
+/* div.box:hover {
+  width: 500px;
+  height: 500px;
+  transition:
+    width .5s 1s,
+    height 1s .5s;
+} */
+
+div.box:hover {
+  transition: 1s;
+
+  /* transform: translateX(-500px); */
+  /* translateは移動できるプロパティだよ
+  X軸は横軸、Y軸は縦軸、Y軸は正の値は下方向への移動をすることになるので */
+
+  /* transform: scale(0.5); */
+  /* scaleは大きさ、カッコ内の倍率になる */
+
+  /* transform: rotate(60deg); */
+  /* rotateは回転、degは度数 */
+
+  transform: rotate(60deg) scale(0.5);
+  /* 合わせ技もできるよ */
+
+  /* transformの意義
+  アニメーションプロパティは処理が重いのでブラウザに負荷がかかる
+  ユーザーに不快感を与えるリスクがあります
+  なので、opacityやtransformといったアニメすることを前提としたプロパティのみ使用するように心がける */
+}
+
+/* div.box.a {
+  transition-timing-function: ease;
+}
+
+div.box.b {
+  transition-timing-function: linear;
+} */
+/* transition-timing-functionはトランジション実行中の値の変更速度を操作するプロパティ */
