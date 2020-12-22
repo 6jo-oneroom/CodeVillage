@@ -1,0 +1,93 @@
+h1 {
+  margin: 10px 50px 0;
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+
+/* 課題1 */
+.btn {
+  width: 400px;
+  height: 100px;
+  border-radius: 50px;
+  font-size: 25px;
+  background: linear-gradient(black, gray);
+  color: white;
+  margin: 50px;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 10px black;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  /* position: relative; */
+  /* top: 10px; */
+  transform: translateY(10px);
+  box-shadow: none;
+}
+
+
+/* 課題2 */
+
+.flame {
+  height: 400px;
+  width: 400px;
+  margin: 50px;
+  overflow: hidden;
+}
+
+.rotate:hover {
+  transform: scale(1.3) rotate(15deg);
+  transition: 0.8s;
+}
+
+
+/* 課題3 */
+
+ul li {
+  list-style: none;
+
+}
+
+.expand {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 50px;
+  padding-inline-start: 0px;
+}
+
+.expand li {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 7px;
+  font-size: 20px;
+}
+
+.expand li::after {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scale(0, 1);
+  transition: transform .5s;
+}
+
+
+
+.expand li:hover::after {
+  transform: scale(1, 1);
+}
+
+.expand li:hover {
+  cursor: pointer;
+}
