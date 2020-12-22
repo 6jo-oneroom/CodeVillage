@@ -68,6 +68,7 @@ ul li {
   text-decoration: none;
   margin-bottom: 7px;
   font-size: 20px;
+  color: gray;
 }
 
 .expand li::after {
@@ -90,4 +91,5 @@ ul li {
 
 .expand li:hover {
   cursor: pointer;
+  color: black;
 }
