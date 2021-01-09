@@ -31,22 +31,59 @@ header {
 
 .ham {
   display: none;
+  width: 1.6rem;
+  height: 1.4rem;
+  position: relative;
+
 
   @include tab {
-    width: 16px;
-    height: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    display: inline-block;
+    transition: all .4s;
+
 
     span {
-      display: inline-block;
+      position: absolute;
+      left: 0;
       width: 100%;
-      height: 1px;
+      height: 0.2rem;
+      display: inline-block;
+      box-sizing: border-box;
       background-color: $fc_01;
+          transition: all .4s;
+
+      &:nth-child(1) {
+        top: 0;
+
+      }
+      &:nth-child(2) {
+        top: calc(50% - 0.1rem); //spanの高さの半分
+
+      }
       &:nth-child(3) {
+        bottom: 0;
         width: 50%;
         text-align: left;
+      }
+    }
+    &:active {
+      span{
+        &:nth-child(1) {
+          transform: translateY(0.6em) rotate(-45deg);
+
+        }
+        &:nth-child(2) {
+          opacity: 0;
+
+        }
+        &:nth-child(3) {
+          transform: translateY(-0.6em) rotate(45deg);
+          width: 100%;
+        }
+
+
       }
     }
   }

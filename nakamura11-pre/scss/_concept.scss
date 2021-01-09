@@ -83,15 +83,15 @@
   &__text {
     font-family: $ff_05;
     width: 45%;
-    // overflow: hidden;
-    height: 145px;
+    overflow: hidden;
+    height: 130px;
 
 
     @include tab {
       width: 100%;
       min-width: 0;
       padding-top: 18px;
-      height: 221px;
+      height: 211px;
     }
   }
 }

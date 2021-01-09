@@ -299,32 +299,51 @@ header {
 
 .ham {
   display: none;
+  width: 1.6rem;
+  height: 1.4rem;
+  position: relative;
 }
 
 @media screen and (max-width: 959px) {
   .ham {
-    width: 16px;
-    height: 14px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: inline-block;
+    -webkit-transition: all .4s;
+    transition: all .4s;
   }
   .ham span {
-    display: inline-block;
+    position: absolute;
+    left: 0;
     width: 100%;
-    height: 1px;
+    height: 0.2rem;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-color: #000000;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+  }
+  .ham span:nth-child(1) {
+    top: 0;
+  }
+  .ham span:nth-child(2) {
+    top: calc(50% - 0.1rem);
   }
   .ham span:nth-child(3) {
+    bottom: 0;
     width: 50%;
     text-align: left;
+  }
+  .ham:active span:nth-child(1) {
+    -webkit-transform: translateY(0.6em) rotate(-45deg);
+            transform: translateY(0.6em) rotate(-45deg);
+  }
+  .ham:active span:nth-child(2) {
+    opacity: 0;
+  }
+  .ham:active span:nth-child(3) {
+    -webkit-transform: translateY(-0.6em) rotate(45deg);
+            transform: translateY(-0.6em) rotate(45deg);
+    width: 100%;
   }
 }
 
@@ -567,7 +586,8 @@ header {
 .concept-contents__text {
   font-family: "Hiragino Kaku Gothic Pro W3", sans-serif;
   width: 45%;
-  height: 145px;
+  overflow: hidden;
+  height: 130px;
 }
 
 @media screen and (max-width: 959px) {
@@ -575,7 +595,7 @@ header {
     width: 100%;
     min-width: 0;
     padding-top: 18px;
-    height: 221px;
+    height: 211px;
   }
 }
 
